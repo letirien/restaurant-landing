@@ -10,28 +10,28 @@
       rating: 4.5,
       origin: 'Chinese',
       price: 14.00,
-      img: './src/assets/dish/Dish-1.png'
+      img: '/assets/dish/Dish-1.png'
     },
     {
       title: 'Rice with Curry',
       rating: 4.9,
       origin: 'Indian Style',
       price: 22.00,
-      img: './src/assets/dish/Dish.png'
+      img: '/assets/dish/Dish.png'
     },
     {
       title: 'Chapatees',
       rating: 5,
       origin: 'Pakistani Style',
       price: 19.00,
-      img: './src/assets/dish/Dish-2.png'
+      img: '/assets/dish/Dish-2.png'
     },
     {
       title: 'SweetDish',
       rating: 4.4,
       origin: 'Western Style',
       price: 16.00,
-      img: './src/assets/dish/Dish-3.png'
+      img: '/assets/dish/Dish-3.png'
     }
   ]
   
@@ -56,7 +56,7 @@
       <h1 class="suggestion-title">kababs</h1>
       <p class="suggestion-description">Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to ... This is a standard Indian mint chutney served with poppadums along with mint and lemon.</p>
       <div class="intro-dish-resp">
-        <img src="./src/assets/decor/HeroImage.png" alt="">
+        <img src="/assets/decor/HeroImage.png" alt="">
       </div>
       <div class="btn-container">
         <Btn primary red corner="right" text="Add To Cart"/>
@@ -75,7 +75,7 @@
     </div>
 </div>
 <div class="intro-dish">
-  <img src="./src/assets/decor/HeroImage.png" alt="">
+  <img src="/assets/decor/HeroImage.png" alt="">
 </div>
 </header>
 </Saos>
