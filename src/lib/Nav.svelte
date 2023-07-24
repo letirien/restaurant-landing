@@ -1,4 +1,19 @@
 <script>
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const navbar = document.querySelector('.nav-container')
+    const wrap = document.querySelector('.wrap')
+    let styl = wrap.currentStyle || window.getComputedStyle(wrap)
+    let widt= wrap.offsetWidth // or use style.width
+    let padding = parseFloat(styl.paddingLeft) + parseFloat(styl.paddingRight)
+    console.log(styl, widt, padding)
+  if (scrollTop > 0) {
+    navbar.classList.add('attached')
+    navbar.style.width = `calc(${widt}px - ${padding}px)`;
+  } else {
+    navbar.classList.remove('attached')
+  }
+});
 </script>
 
 <div class="nav-container">
@@ -14,31 +29,21 @@
     </svg>
     <navbar>
       <a href="#" class="nav-item">menu</a>
-      <a href="#" class="nav-item">about us</a>
-      <a href="#" class="nav-item">our specials</a>
-      <a href="#" class="nav-item">our locations</a>
-      <a href="#" class="nav-item">our cheffs</a>
+      <a href="#" class="nav-item">spécialités</a>
+      <a href="#" class="nav-item">a propos de nous</a>
+      <a href="#" class="nav-item">nous localiser</a>
     </navbar>
     <div class="icon-bar">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger">
         <rect x="4.5" y="11.5" width="15" height="2" rx="1" fill="#2A333E"/>
         <rect x="3" y="5.5" width="18" height="1.5" rx="0.75" fill="#2A333E"/>
         <rect x="3" y="17" width="18" height="1.5" rx="0.75" fill="#2A333E"/>
-        </svg>
-              
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8723 16.8116C19.1996 15.2436 20 13.2153 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.2153 20 15.2436 19.1996 16.8116 17.8723L19.4697 20.5303C19.7626 20.8232 20.2374 20.8232 20.5303 20.5303C20.8232 20.2374 20.8232 19.7626 20.5303 19.4697L17.8723 16.8116ZM18.5 11C18.5 15.1421 15.1421 18.5 11 18.5C6.85786 18.5 3.5 15.1421 3.5 11C3.5 6.85786 6.85786 3.5 11 3.5C15.1421 3.5 18.5 6.85786 18.5 11Z" fill="#2A333E"/>
       </svg>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.69865 7L10.0973 2.78467C11.161 1.7653 12.839 1.7653 13.9027 2.78467L18.3013 7H20.847C21.4555 7 21.923 7.53899 21.8369 8.14142L20.368 18.4243C20.1568 19.9022 18.8911 21 17.3981 21H6.6019C5.10895 21 3.84318 19.9022 3.63205 18.4243L2.16307 8.14142C2.07701 7.53899 2.54447 7 3.15302 7H5.69865ZM11.1351 3.86766C11.6186 3.4043 12.3814 3.4043 12.8649 3.86766L16.1334 7H7.86658L11.1351 3.86766ZM3.72952 8.5L5.11697 18.2121C5.22254 18.9511 5.85542 19.5 6.6019 19.5H17.3981C18.1446 19.5 18.7775 18.9511 18.883 18.2121L20.2705 8.5H3.72952Z" fill="#2A333E"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11.25C8.41421 11.25 8.75 11.5858 8.75 12V16C8.75 16.4142 8.41421 16.75 8 16.75C7.58579 16.75 7.25 16.4142 7.25 16V12C7.25 11.5858 7.58579 11.25 8 11.25Z" fill="#2A333E"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.25C12.4142 11.25 12.75 11.5858 12.75 12V16C12.75 16.4142 12.4142 16.75 12 16.75C11.5858 16.75 11.25 16.4142 11.25 16V12C11.25 11.5858 11.5858 11.25 12 11.25Z" fill="#2A333E"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 11.25C16.4142 11.25 16.75 11.5858 16.75 12V16C16.75 16.4142 16.4142 16.75 16 16.75C15.5858 16.75 15.25 16.4142 15.25 16V12C15.25 11.5858 15.5858 11.25 16 11.25Z" fill="#2A333E"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
       </svg>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.5C13.933 10.5 15.5 8.933 15.5 7C15.5 5.067 13.933 3.5 12 3.5C10.067 3.5 8.5 5.067 8.5 7C8.5 8.933 10.067 10.5 12 10.5ZM12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#2A333E"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 15.75C6.65279 15.75 4.75 17.6528 4.75 20V21C4.75 21.4142 4.41421 21.75 4 21.75C3.58579 21.75 3.25 21.4142 3.25 21V20C3.25 16.8244 5.82436 14.25 9 14.25H15C18.1756 14.25 20.75 16.8244 20.75 20V21C20.75 21.4142 20.4142 21.75 20 21.75C19.5858 21.75 19.25 21.4142 19.25 21V20C19.25 17.6528 17.3472 15.75 15 15.75H9Z" fill="#2A333E"/>
-      </svg>                    
+  
+
     </div>
 
 </div>
@@ -49,11 +54,13 @@
     display: none;
   }
 .nav-container{
-  height: 43px;
+  height: fit-content;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1
 }
 navbar{
   display: flex;
