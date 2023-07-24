@@ -6,7 +6,6 @@
     let styl = wrap.currentStyle || window.getComputedStyle(wrap)
     let widt= wrap.offsetWidth // or use style.width
     let padding = parseFloat(styl.paddingLeft) + parseFloat(styl.paddingRight)
-    console.log(styl, widt, padding)
   if (scrollTop > 0) {
     navbar.classList.add('attached')
     navbar.style.width = `calc(${widt}px - ${padding}px)`;

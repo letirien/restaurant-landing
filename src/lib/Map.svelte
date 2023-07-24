@@ -1,6 +1,12 @@
 <script>
 import { onMount } from 'svelte';
 import L from 'leaflet'
+import { icon } from "leaflet"
+
+const ICON = icon({
+  iconUrl: "/marker.png",
+  iconSize: [32, 32],
+})
 // Initialisation de la carte
 
 onMount(() => {
@@ -20,9 +26,8 @@ onMount(() => {
         if (data.length > 0) {
             const lat = parseFloat(data[0].lat);
             const lon = parseFloat(data[0].lon);
-
             // Ajout du marqueur à la carte
-            L.marker([lat, lon]).addTo(map);
+            L.marker([lat, lon],{icon: ICON}).addTo(map);
             // Déplacer la carte pour centrer le marqueur
             map.setView([lat, lon], 13);
         } else {
