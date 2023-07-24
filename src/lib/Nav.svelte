@@ -27,10 +27,10 @@
     <path d="M113.669 9H112.241V2.736L109.589 9H108.341L105.713 2.76V9H104.309V0.492004H106.229L108.989 6.984L111.713 0.492004H113.669V9Z" fill="#2A333E"/>
     </svg>
     <navbar>
-      <a href="#" class="nav-item">menu</a>
-      <a href="#" class="nav-item">spécialités</a>
-      <a href="#" class="nav-item">a propos de nous</a>
-      <a href="#" class="nav-item">nous localiser</a>
+      <a href="#menu" class="nav-item">menu</a>
+      <a href="#store" class="nav-item">spécialités</a>
+      <a href="#about" class="nav-item">a propos de nous</a>
+      <a href="#location" class="nav-item">nous localiser</a>
     </navbar>
     <div class="icon-bar">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger">

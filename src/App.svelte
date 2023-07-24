@@ -224,7 +224,7 @@
     </Saos>
   </div>  
   </section>
-  <section class="menu">
+  <section class="menu" id="menu">
     <div class="wrap small">
       <h2>Notre &#160 menu</h2>
       <div class="menu-container">
@@ -245,7 +245,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section id="about">
     <div class="wrap small">
         <div class="about-us">
           <div>
@@ -259,7 +259,7 @@
         </div>
     </div>
   </section>
-  <section>
+  <section id="location">
     <div class="wrap large">
       <h2>Adresse</h2>
       <p>Nous nous situons au : 8 rue perle, Schiltigheim, 67300</p>
@@ -337,7 +337,12 @@
   }
   section{
     background: #F9F9FB;
-    padding: 68px 0;
+    margin-top: -135px;
+    padding-top: 203px;
+    padding-bottom: 68px;
+  }
+  section#menu{
+    position: relative;
   }
   .products-container{
     margin-top: 110px;

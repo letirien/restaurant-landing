@@ -1,9 +1,7 @@
 *{
   margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; list-style-type: none;
   color: #2A333E;
-}
-.leaflet-marker-icon{
-  
+  scroll-behavior: smooth;
 }
 .wrap{
   max-width: 1440px;
